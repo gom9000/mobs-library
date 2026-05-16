@@ -1,6 +1,4 @@
 # Electronics Module Boards Library
-Various modular-designed electronics boards created for home learning projects.
-
 A collection of modular electronics boards (MOBs) and CAD resources for rapid prototyping and interfacing .
 
 ![overview](images/overview.jpg)
