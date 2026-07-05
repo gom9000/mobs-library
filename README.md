@@ -10,30 +10,41 @@ These MOdule Boards (MOBs) are useful for:
 * expanding and interfacing components functions
 * having fun building simple circuits
 
+**MOdule Boards Status Legend**
+- **`[Designed]` Development**: Layout and schematics completed. Ready for physical build.
+- **`[Prototyped]` Built**: Physical board assembled. Ready for bench testing.
+- **`[Validated]` Tested**: Verified on the bench, and relative documentation is finalized.
+
 
 ## Contents of the MOBs library
 * [ExpressPCB custom components library](expresspcb) containing the ExpressPCB files of schematic and pcb components used for drawing the MOBs layout
 
 ### MOBs operating at both 3V3 and 5V
-* [mob-psu-distribution](mobs/mob-psu-distribution/) : 8-lines power bus expansion module board
-* [mob-io-array-switch-and-led-4x](mobs/mob-io-array-switch-and-led-4x/) : 4-switch input array and 4-led output array module board
-* [mob-io-array-led-8x](mobs/mob-io-array-led-8x/) : 8-led output array module board
-* [mob-io-array-switch-8x](mobs/mob-io-array-switch-8x/) : 8-switch input array module board
-* [mob-io-matrix-switch-4x4](mobs/mob-io-matrix-switch-4x4/) : 4x4 input switch matrix module board
-* [mob-io-matrix-led-4x4](mobs/mob-io-matrix-led-4x4/) : 4x4 led matrix module board
-* [mob-fn-cbank-26.4mF](mobs/mob-fn-cbank-26.4mF/) : 26400uF Capacitor bank
-* [mob-if-midi](mobs/mob-if-midi/) : midi in/out/thru module board
-* [mob-voltage-divider-pot-2x](mobs/mob-voltage-divider-pot-2x/) : voltage-divider potentiometers module board
+|Module|Description|Status|
+| :--- | :--- | :--- |
+| [mob-psu-distribution](mobs/mob-psu-distribution/) | 8-lines power bus expansion module board | `[Prototyped]` |
+| [mob-io-array-switch-and-led-4x](mobs/mob-io-array-switch-and-led-4x/) | 4-switch input array and 4-led output array module board | `[Prototyped]` |
+| [mob-io-array-led-8x](mobs/mob-io-array-led-8x/) | 8-led output array module board | `[Prototyped]` |
+| [mob-io-array-switch-8x](mobs/mob-io-array-switch-8x/) | 8-switch input array module board | `[Prototyped]` |
+| [mob-io-matrix-switch-4x4](mobs/mob-io-matrix-switch-4x4/) | 4x4 input switch matrix module board | `[Prototyped]` |
+| [mob-io-matrix-led-4x4](mobs/mob-io-matrix-led-4x4/) | 4x4 led matrix module board | `[Designed]` |
+| [mob-fn-cbank-26.4mF](mobs/mob-fn-cbank-26.4mF/) | 26400uF Capacitor bank | `[Prototyped]` |
+| [mob-if-midi](mobs/mob-if-midi/) | midi in/out/thru module board | `[Prototyped]` |
+| [mob-voltage-divider-pot-2x](mobs/mob-voltage-divider-pot-2x/) | voltage-divider potentiometers module board | `[Prototyped]` |
 
 ### MOBs operating only at 5V
-* [mob-psu-5v](mobs/mob-psu-5v/) : psu 5V module board
-* [mob-if-rs232](mobs/mob-if-rs232/) : rs232 interface board
-* [mob-mcu-pic16f6x8](mobs/mob-mcu-pic16f6x8/) : Microchip PIC 16F6x8 microcontroller module board
+|Module|Description|Status|
+| :--- | :--- | :--- |
+| [mob-psu-5v](mobs/mob-psu-5v/) | psu 5V module board | `[Prototyped]` |
+| [mob-if-rs232](mobs/mob-if-rs232/) | rs232 interface board | `[Designed]` |
+| [mob-mcu-pic16f6x8](mobs/mob-mcu-pic16f6x8/) | Microchip PIC 16F6x8 microcontroller module board | `[Prototyped]` |
 
 ### MOBs for audio experiences
-* [mob-audio-psu-9v-5v](mobs/mob-audio-psu-9v-5v/) : psu 9V (VCC) and 5V (VR) module board
-* [mob-audio-jack](mobs/mob-audio-jack/) : audio TRS jack 1/4" adapter module board
-* [mob-audio-io-stage](mobs/mob-audio-io-stage/) : audio input and output stages module board
+|Module|Description|Status|
+| :--- | :--- | :--- |
+| [mob-audio-psu-9v-5v](mobs/mob-audio-psu-9v-5v/) | psu 9V (VCC) and 5V (VR) module board | `[Prototyped]` |
+| [mob-audio-jack](mobs/mob-audio-jack/) | audio TRS jack 1/4" adapter module board | `[Prototyped]` |
+| [mob-audio-io-stage](mobs/mob-audio-io-stage/) | audio input and output stages module board | `[Prototyped]` |
 
 
 ## Specifications
@@ -69,16 +80,14 @@ Schematics and PCB layouts are designed with ExpressPCB free CAD software.
 
 
 ## Changes
-See file [CHANGES](CHANGES.md) for the project resources change log
+See file [CHANGES](CHANGES.md) for the project resources change log.
 
 
 ## Future Plans for the MOBs Library
 * Add more MOBs!
 
 
-## About
-Author : Alessandro Fraschetti (mail: [gos95@gommagomma.net](mailto:gos95@gommagomma.net))
-
-
-## License
-This eXPerience is licensed under the [MIT license](LICENSE)
+## About & License
+**Author**: Alessandro Fraschetti (gom9000).<br/>
+**Technical Notes**: The hardware design was supported by **ExpressPCB** and the custom **[expresspcb-goslib](https://github.com/gom9000/expresspcb-goslib)** libraries.<br/>
+**License**: This project is licensed under the [MIT License](LICENSE).

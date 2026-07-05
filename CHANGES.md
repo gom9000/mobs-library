@@ -2,6 +2,13 @@
 This file contains the log of changes of **MOBs Library** project.
 
 
+## Ongoing changes
+
+
+## 0.8.0 2026-07-05 Feature release
+- Updated main README with MOBs deploy status
+
+
 ## 0.7.0 2024-07-21 Feature release
 - Added MOB mob-audio-psu-9v-5v
 - Added MOB mob-audio-jack
@@ -36,7 +43,7 @@ This file contains the log of changes of **MOBs Library** project.
 - Ported MOB mob-io-matrix-led-4x4
 - Ported MOB mob-if-rs232
 - Ported MOB mob-fn-cbank-26.4mF
-- Ported MOB mob-mcu-16f6x8
+- Ported MOB mob-mcu-pic16f6x8
 - Added MOB mob-io-array-led-8x
 - Added MOB mob-io-array-switch-8x
 
