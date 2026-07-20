@@ -22,8 +22,10 @@ The module can be powered from 9V to 15V, provides stabilized 5V output and deli
 - [x] led current limiter resistor 1Kohm
 - [x] power activity led green 3mm
 
-- [x] 2-pin (Molex-KK) power connector
+- [x] 4 x 2-pin (Molex-KK) power connector
+- [x] 4 x on/off switch
 - [x] filter capacitor 680uF
 - [x] 3 x capacitor 100nF
 - [x] 5 x 1A diodes
 - [x] 7805 voltage regulator
+- [x] small heatsink for TO220 package
