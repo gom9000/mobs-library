@@ -1,5 +1,5 @@
 # Electronics Module Boards Library
-A collection of modular electronics boards (MOBs) and CAD resources for rapid prototyping and interfacing .
+A collection of modular electronics boards (MOBs) and CAD resources for rapid prototyping and interfacing.
 
 ![overview](images/overview.jpg)
 
@@ -10,41 +10,45 @@ These MOdule Boards (MOBs) are useful for:
 * expanding and interfacing components functions
 * having fun building simple circuits
 
+
+
+## The MOBs Library
+
 **MOdule Boards Status Legend**
 - **`[Designed]` Development**: Layout and schematics completed. Ready for physical build.
 - **`[Prototyped]` Built**: Physical board assembled. Ready for bench testing.
 - **`[Validated]` Tested**: Verified on the bench, and relative documentation is finalized.
 
 
-## Contents of the MOBs library
-* [ExpressPCB custom components library](expresspcb) containing the ExpressPCB files of schematic and pcb components used for drawing the MOBs layout
-
 ### MOBs operating at both 3V3 and 5V
 |Module|Description|Status|
 | :--- | :--- | :--- |
-| [mob-psu-distribution](mobs/mob-psu-distribution/) | 8-lines power bus expansion module board | `[Prototyped]` |
-| [mob-io-array-switch-and-led-4x](mobs/mob-io-array-switch-and-led-4x/) | 4-switch input array and 4-led output array module board | `[Prototyped]` |
-| [mob-io-array-led-8x](mobs/mob-io-array-led-8x/) | 8-led output array module board | `[Prototyped]` |
-| [mob-io-array-switch-8x](mobs/mob-io-array-switch-8x/) | 8-switch input array module board | `[Prototyped]` |
-| [mob-io-matrix-switch-4x4](mobs/mob-io-matrix-switch-4x4/) | 4x4 input switch matrix module board | `[Prototyped]` |
-| [mob-io-matrix-led-4x4](mobs/mob-io-matrix-led-4x4/) | 4x4 led matrix module board | `[Designed]` |
-| [mob-fn-cbank-26.4mF](mobs/mob-fn-cbank-26.4mF/) | 26400uF Capacitor bank | `[Prototyped]` |
-| [mob-if-midi](mobs/mob-if-midi/) | midi in/out/thru module board | `[Prototyped]` |
-| [mob-voltage-divider-pot-2x](mobs/mob-voltage-divider-pot-2x/) | voltage-divider potentiometers module board | `[Prototyped]` |
+| [mob-psu-distribution](mobs/mob-psu-distribution/) | Eight-lines power bus expansion| `[Prototyped]` |
+| [mob-voltage-divider-pot-2x](mobs/mob-voltage-divider-pot-2x/) | Dual voltage-divider potentiometers| `[Prototyped]` |
+| [mob-voltage-reference-2x](mobs/mob-voltage-reference-2x/) | Dual ratiometric buffered Vref (1/2 Vcc, 1/4 Vcc)| `[Designed]` |
+| [mob-io-array-switch-and-led-4x](mobs/mob-io-array-switch-and-led-4x/) | Quad switch input array and quad LED output array | `[Prototyped]` |
+| [mob-io-array-led-8x](mobs/mob-io-array-led-8x/) | Eight LED output array | `[Prototyped]` |
+| [mob-io-array-switch-8x](mobs/mob-io-array-switch-8x/) | Eight switch input array | `[Prototyped]` |
+| [mob-io-matrix-switch-4x4](mobs/mob-io-matrix-switch-4x4/) | 4x4 input switch matrix | `[Prototyped]` |
+| [mob-io-matrix-led-4x4](mobs/mob-io-matrix-led-4x4/) | 4x4 output led matrix | `[Designed]` |
+| [mob-fn-cbank-26.4mF](mobs/mob-fn-cbank-26.4mF/) | 26.4 mF Capacitor bank | `[Prototyped]` |
+| [mob-if-midi](mobs/mob-if-midi/) | MIDI IN/OUT/THRU interface | `[Prototyped]` |
+
 
 ### MOBs operating only at 5V
 |Module|Description|Status|
 | :--- | :--- | :--- |
-| [mob-psu-5v](mobs/mob-psu-5v/) | psu 5V module board | `[Prototyped]` |
-| [mob-if-rs232](mobs/mob-if-rs232/) | rs232 interface board | `[Designed]` |
-| [mob-mcu-pic16f6x8](mobs/mob-mcu-pic16f6x8/) | Microchip PIC 16F6x8 microcontroller module board | `[Prototyped]` |
+| [mob-psu-5v](mobs/mob-psu-5v/) | Linear 5V (Vcc) PSU | `[Prototyped]` |
+| [mob-if-rs232](mobs/mob-if-rs232/) | RS-232 interface | `[Designed]` |
+| [mob-mcu-pic16f6x8](mobs/mob-mcu-pic16f6x8/) | Microchip PIC16F6x8 microcontroller board | `[Prototyped]` |
 
 ### MOBs for audio experiences
 |Module|Description|Status|
 | :--- | :--- | :--- |
-| [mob-audio-psu-9v-5v](mobs/mob-audio-psu-9v-5v/) | psu 9V (VCC) and 5V (VR) module board | `[Prototyped]` |
-| [mob-audio-jack](mobs/mob-audio-jack/) | audio TRS jack 1/4" adapter module board | `[Prototyped]` |
-| [mob-audio-io-stage](mobs/mob-audio-io-stage/) | audio input and output stages module board | `[Prototyped]` |
+| [mob-audio-psu-9v-5v](mobs/mob-audio-psu-9v-5v/) | Dual linear 9V (Vcc) and 5V (Vdd or Vref) PSU | `[Prototyped]` |
+| [mob-audio-jack](mobs/mob-audio-jack/) | Audio TRS jack 1/4" to  pin-head adapter | `[Prototyped]` |
+| [mob-audio-io-stage](mobs/mob-audio-io-stage/) | Audio input and output buffered stages | `[Prototyped]` |
+
 
 
 ## Specifications
@@ -72,22 +76,27 @@ Schematics and PCB layouts are designed with ExpressPCB free CAD software.
 * IC decoupling capacitors: C=100nF
 * Board bulk capacitors: C=10uF
 
-### ExpressPCB Custom Components Library
+### ExpressPCB MOBs Custom Components Library
+[ExpressPCB MOBs custom components library](expresspcb) contains the ExpressPCB files of schematic and pcb components used for drawing the MOBs layout, where:
+
 * ExpressPCB components used for MOBs are customized and named as "_MOB_name__*size*"
 * Paperboard layout templates are also saved as ExpressPCB custom components and named as "_MOB__Paperboard_*size*"
 * ExpressPCB custom components size units, unless otherwise specified, are 1/10 of inches
 * PCB layout traces are 0.05", pads are 0,065"
 
 
+
 ## Changes
 See file [CHANGES](CHANGES.md) for the project resources change log.
+
 
 
 ## Future Plans for the MOBs Library
 * Add more MOBs!
 
 
+
 ## About & License
-**Author**: Alessandro Fraschetti (gom9000).<br/>
-**Technical Notes**: The hardware design was supported by **ExpressPCB** and the custom **[expresspcb-goslib](https://github.com/gom9000/expresspcb-goslib)** libraries.<br/>
+**Author**: Alessandro Fraschetti (gom9000).  
+**Technical Notes**: The hardware design was supported by **ExpressPCB** and the custom **[expresspcb-goslib](https://github.com/gom9000/expresspcb-goslib)** libraries.  
 **License**: This project is licensed under the [MIT License](LICENSE).
