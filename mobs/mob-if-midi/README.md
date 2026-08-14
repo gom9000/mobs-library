@@ -1,5 +1,5 @@
 # *MIDI Interface (IN/OUT/THRU)* Module Board
-**Module Board Status**: `[Prototyped]`
+**Module Board Status**: `[Validated]`
 
 Optoisolated MIDI input, output, and thru hardware interface module board.  
 This MOB interfaces dual-voltage host logic ($3.3\text{V} / 5.0\text{V}$) with standard $5.0\text{V}$ MIDI current loops.

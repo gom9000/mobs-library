@@ -4,7 +4,7 @@
 Microchip PIC16F628 / PIC16F648 microcontroller core breakout module board.  
 This MOB operates at a nominal logic supply voltage of $5.0\text{V}$.
 
-![mob-built](mob-mcu-16f6x8_built.jpg)
+![mob-built](mob-mcu-pic16f6x8_built.jpg)
 
 This module serves as a modular hardware core for 18-pin PIC microcontrollers. It integrates dedicated In-Circuit Serial Programming (ICSP) isolation, hardware debounced reset circuitry, an optional external crystal oscillator network, and full I/O port breakout headers.
 
@@ -22,7 +22,7 @@ This module serves as a modular hardware core for 18-pin PIC microcontrollers. I
 ## Design
 
 ### Schematic
-![mob-schematic](mob-mcu-16f6x8_sch.jpg)
+![mob-schematic](mob-mcu-pic16f6x8_sch.jpg)
 
 ### Circuit Description
 The board architecture forms a flexible hardware development system for Microchip 18-pin microcontrollers ($U1$). Power processing includes an inline reverse-current protection diode ($D1$), a $10\,\mu\text{F}$ tantalum reservoir, and dual $100\text{nF}$ high-frequency decoupling capacitors ($C$, $C5$). 
@@ -35,7 +35,7 @@ Jumper routing options maximize hardware layout freedom:
 * **`JP5`**: Disconnects the multi-function `MCLR` structure from the standard external distribution headers.
 
 ### PCB Layout
-![mob-pcb](mob-mcu-16f6x8_pcb.jpg)
+![mob-pcb](mob-mcu-pic16f6x8_pcb.jpg)
 
 
 ## Bill of Materials

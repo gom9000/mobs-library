@@ -1,5 +1,5 @@
 # *PSU 5V (4-Way Distribution)* Module Board
-**Module Board Status**: `[Prototyped]`
+**Module Board Status**: `[Validated]`
 
 Single-rail linear power supply and 4-channel distribution module board delivering a stabilized $+5\text{V}$ output.  
 This MOB accepts wide-range AC or DC input voltages from $9\text{V}$ to $15\text{V}$.
@@ -14,7 +14,7 @@ This module serves as a central power distribution hub for operational systems r
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **Supply Voltage** | 9.0 | 9.0 - 12.0 | 15.0 | V | AC RMS or DC input range |
 | **Output Voltage**| 4.80 | 5.0 | 5.20 | V | Regulated $+5\text{V}$ bus rail |
-| **Maximum Output Current** | — | — | 0.5 | A | Thermally limited by TO-220 heatsink |
+| **Maximum Output Total Current** | — | — | 350 @ 12.0VDC, 500 @ 9.0VDC | mA | Thermally limited by TO-220 heatsink ($\Theta_{hs} \approx 30\text{ K/W}$, $T_{J_{MAX}} \le 100 \text{ }^\circ C$) |
 | **Main Smoothing Filter** | — | 680 | — | $\mu$F | Electrolytic smoothing capacitor ($C2$) |
 | **Bulk Output Capacitance** | — | 10 | — | $\mu$F | Tantalum stabilization capacitor ($C5$) |
 | **Distribution Ports** | — | 4 | — | Ways | Independently switched 2-pin outputs |
@@ -40,7 +40,13 @@ The downstream network splits the $+5\text{V}$ rail into four parallel distribut
 
 
 ## Test Log
-Todo.
+**Thermal & Load Test (12.0V DC Input)**:
+* Load on Single Channel: 18.8Ω (4×4.7Ω 10W resistors in series)
+* $I_{\text{OUT}}$: $266\text{ mA}$.
+* $T_{\text{amb}}$: $30^\circ\text{C}$.
+* Measured Heatsink Temp ($T_{hs}$): $74^\circ\text{C}$ after 10 min continuous load.
+* Calculated Junction Temp ($T_J$): $\approx 82^\circ\text{C}$.
+* $V_{\text{OUT}}$ Stability: $5.01\text{V}$ (cold) $\to 5.03\text{V}$ (hot, $+0.4\%$ thermal drift) $\to 5.01\text{V}$ (cooled down).
 
 
 ## Bill of Materials

@@ -6,8 +6,9 @@ This file contains the log of changes of **MOBs Library** project.
 *NOP*
 
 
-## 0.9 2026-08-10 Feature release
+## 0.9 2026-08-14 Feature release
 - Updated most MOB READMEs with specifications, circuit description and test logs
+- Added TEBOs legacy boards currently not ported to MOB.
 
 
 ## 0.8.0 2026-07-05 Feature release

@@ -1,5 +1,5 @@
 # *LED Matrix (4x4)* Module Board
-**Module Board Status**: `[Prototyped]`
+**Module Board Status**: `[Designed]`
 
 Four-by-four LED indicator matrix output module board.  
 This MOB operates across a logic supply voltage range from $3.3\text{V}$ to $5.0\text{V}$.

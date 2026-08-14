@@ -1,5 +1,5 @@
 # *C-Bank 26.4mF* Module Board
-**Module Board Status**: `[Prototyped]`
+**Module Board Status**: `[Validated]`
 
 High-capacity $26400\,\mu\text{F}$ capacitor bank power filtering and stabilization module board.  
 This MOB operates across a DC supply voltage range from $3.3\text{V}$ to $5.0\text{V}$.

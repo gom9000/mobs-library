@@ -1,5 +1,5 @@
 # *Switch & LED Array (4x4)* Module Board
-**Module Board Status**: `[Designed]`
+**Module Board Status**: `[Validated]`
 
 Four channel active-low switch input array and four channel active-high LED output array module board.  
 This MOB operates across a logic supply voltage range from $3.3\text{V}$ to $5.0\text{V}$.

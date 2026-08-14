@@ -13,15 +13,19 @@ These MOdule Boards (MOBs) are useful for:
 
 ## The MOBs Library
 **MOdule Boards Status Legend**
-- **`[Designed]` Development**: Layout and schematics completed. Ready for physical build.
-- **`[Prototyped]` Built**: Physical board assembled. Ready for bench testing.
-- **`[Validated]` Tested**: Verified on the bench and circuit documentation is finalized.
+- **`[Designed]` Development**: Schematic completed. Ready for PCB layout and physical assembly.
+- **`[Prototyped]` Built**: Physical board assembled. Ready for bench testing and verification.
+- **`[Validated]` Ready**: Hardware verified on the bench and circuit documentation completed.
+- **`[Legacy]` TEBO**: Legacy board from the previous TEBO standard, **non-compliant** with the current MOB standard:
+  * **Power Supply Polarity**: Often reversed (**Positive on the Right** on the `PWR` connector).
+  * **Missing Features**: No onboard power status LED or dedicated bulk capacitor.
+  * **Connectors**: Non-standard pitch/pinout (incompatible with standard Molex-KK).
 
 ### MOBs for PSU eXPeriences
 | Module | Description | Voltage Range | Status |
 | :--- | :--- | :---: | :---: |
-| [mob-psu-5v](mobs/mob-psu-5v/) | Linear 5V ($V_{CC}$) PSU | 5.0V | `[Designed]` |
-| *[mob-psu-cbank-26.4mF](mobs/mob-psu-cbank-26.4mF/)* | *26.4 mF Capacitor bank* | *3.3–5.0V* | *`[Prototyped]`* |
+| [mob-psu-5v](mobs/mob-psu-5v/) | Linear 5V ($V_{CC}$) PSU | 5.0V | `[Validated]` |
+| [mob-psu-cbank-26.4mF](mobs/mob-psu-cbank-26.4mF/) | 26.4 mF Capacitor bank | 3.3–5.0V | `[Validated]` |
 | [mob-psu-distribution](mobs/mob-psu-distribution/) | Eight-lines power bus expansion | 3.3–9.0V | `[Validated]` |
 | [mob-psu-vdivider-pot-2x](mobs/mob-psu-vdivider-pot-2x/) | Dual potentiometers voltage-divider | 3.3–9.0V | `[Validated]` |
 | [mob-psu-vdivider-buf](mobs/mob-psu-vdivider-buf/) | Dual buffered voltage divider ($V_{CC}/2$ and $V_{CC}/4$ references) | 3.3–9.0V | `[Designed]` |
@@ -31,9 +35,9 @@ These MOdule Boards (MOBs) are useful for:
 | :--- | :--- | :---: | :---: |
 | [mob-io-array-led-8x](mobs/mob-io-array-led-8x/) | Eight LED output array | 3.3–5.0V (logic) | `[Validated]` |
 | [mob-io-array-switch-8x](mobs/mob-io-array-switch-8x/) | Eight switch input array | 3.3–5.0V (logic) | `[Validated]` |
-| *[mob-io-array-switch-and-led-4x](mobs/mob-io-array-switch-and-led-4x/)* | *Quad switch input array and quad LED output array* | *3.3–5.0V (logic)* | *`[Prototyped]`* |
+| [mob-io-array-switch-and-led-4x](mobs/mob-io-array-switch-and-led-4x/) | Quad switch input array and quad LED output array | 3.3–5.0V (logic) | `[Validated]` |
 | [mob-io-matrix-led-4x4](mobs/mob-io-matrix-led-4x4/) | 4x4 output led matrix | 3.3–5.0V (logic) | `[Designed]` |
-| [mob-io-matrix-switch-4x4](mobs/mob-io-matrix-switch-4x4/) | 4x4 input switch matrix | 3.3–5.0V (logic) | `[Prototyped]` |
+| [mob-io-matrix-switch-4x4](mobs/mob-io-matrix-switch-4x4/) | 4x4 input switch matrix | 3.3–5.0V (logic) | `[Validated]` |
 | [mob-if-midi](mobs/mob-if-midi/) | MIDI IN/OUT/THRU interface | 3.3–5.0V (logic) | `[Validated]` |
 | [mob-if-rs232](mobs/mob-if-rs232/) | RS-232 interface | 5.0V (logic) | `[Designed]` |
 | [mob-mcu-pic16f6x8](mobs/mob-mcu-pic16f6x8/) | Microchip PIC16F6x8 microcontroller board | 5.0V (logic) | `[Prototyped]` |
@@ -41,9 +45,17 @@ These MOdule Boards (MOBs) are useful for:
 ### MOBs for Audio eXPeriences
 | Module | Description | Voltage Range | Status |
 | :--- | :--- | :---: | :---: |
-| [mob-audio-psu-9v-5v](mobs/mob-audio-psu-9v-5v/) | Dual linear 9V ($V_{CC}$) and 5V ($V_{DD}$ or $V_{REF}$) PSU | 5.0–9.0V | `[Prototyped]` |
+| [mob-audio-psu-9v-5v](mobs/mob-audio-psu-9v-5v/) | Dual linear 9V ($V_{CC}$) and 5V ($V_{DD}$ or $V_{REF}$) PSU | 5.0–9.0V | `[Validated]` |
 | [mob-audio-jack](mobs/mob-audio-jack/) | Audio TRS jack 1/4" to pin-header adapter | — | `[Validated]` |
 | [mob-audio-io-stage](mobs/mob-audio-io-stage/) | Audio input and output buffered stages | 5.0–9.0V | `[Prototyped]` |
+
+### Old MOBs (TEBO Legacy)
+| Module | Description | Voltage Range | Status |
+| :--- | :--- | :---: | :---: |
+| [tebo-psu-5v](tebos/tebo-psu-5v/) | Linear 5V ($V_{CC}$) PSU | 5.0V | `[Legacy]` |
+| [tebo-fn-clock-822](tebos/tebo-fn-clock-822/) | Programmable Clock 8 KHz to 22 KHz | 5.0V (logic) | `[Legacy]` |
+| [tebo-if-midi-in](tebos/tebo-if-midi-in/) | MIDI IN interface | 5.0V (logic) | `[Legacy]` |
+| [tebo-if-midi-out](tebos/tebo-if-midi-out/) | MIDI OUT interface | 5.0V (logic) | `[Legacy]` |
 
 
 ## Specifications
@@ -87,7 +99,7 @@ Layouts and schematics are designed using ExpressPCB (free CAD software) and the
 * Board templates follow the format `_MOB__Paperboard_<size>`
 * ExpressPCB size units are $1/10$ of an inch ($0.1"$)
 * Standard trace width: **$0.05"$ ($50\text{ mil}$)**, pad diameter: $0.065"$
-  * *Note*: A $50\text{ mil}$ trace on 1 oz copper provides up to $\approx 900\text{mA}$ continuous current capability under worst-case thermal and loading constraints ($50^\circ\text{C}$ ambient, $J = 20\,\text{A/mm}^2$ conservative density), while bounding ohmic drop below $20\text{mV}$ on standard board runs (ref. [xp-hardware#](https://github.com/gom9000/xp-hardware/tree/master/hardware-notes/conductors-and-wiring)).
+  * *Note*: A $50\text{ mil}$ trace on 1 oz copper provides up to $\approx 900\text{mA}$ continuous current capability under worst-case thermal and loading constraints ($50^\circ\text{C}$ ambient, $J = 20\,\text{A/mm}^2$ conservative density), while bounding ohmic drop below $20\text{mV}$ on standard board runs (ref. [xp-hardware: Conductors & Wiring](https://github.com/gom9000/xp-hardware/tree/master/hardware-notes/conductors-and-wiring)).
 
 
 ## Changes

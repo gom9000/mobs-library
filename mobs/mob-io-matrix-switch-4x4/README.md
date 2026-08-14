@@ -1,5 +1,5 @@
 # *Switch Matrix (4x4)* Module Board
-**Module Board Status**: `[Prototyped]`
+**Module Board Status**: `[Validated]`
 
 Four-by-four active-low key matrix input module board with anti-ghosting diodes.  
 This MOB operates across a logic supply voltage range from $3.3\text{V}$ to $5.0\text{V}$.

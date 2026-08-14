@@ -1,5 +1,5 @@
 # *Dual Linear PSU (9V/5V)* Module Board
-**Module Board Status**: `[Prototyped]`
+**Module Board Status**: `[Validated]`
 
 Dual-rail linear power supply module board featuring cascaded $9\text{V}$ and $5\text{V}$ regulated outputs.  
 This MOB accepts wide-range AC or DC input voltages from $12\text{V}$ to $15\text{V}$.
@@ -15,6 +15,9 @@ This module provides clean, low-noise linear regulation suitable for audio circu
 | **Supply Voltage** | 12.0 | 12.0 - 15.0 | 18.0 | V | AC RMS or DC polar/non-polar input |
 | **Output Voltage 1** | 8.65 | 9.0 | 9.35 | V | DC regulated rail via `U1` (7809) |
 | **Output Voltage 2** | 4.80 | 5.0 | 5.20 | V | DC regulated rail via `U2` (7805) |
+| **Max Output Current (5V Rail)** | — | — | 500| mA | $I_{9V} = 0\text{mA}$ |
+| **Max Output Current (9V Rail)** | — | — | 500 | mA | $I_{5V} = 0\text{mA}$ |
+| **Max Combined Load ($I_5 + I_9$)** | — | — | 500 | mA | Cascaded topology limit ($\Theta_{hs} \approx 30\text{ K/W}$, $T_J \le 100^\circ\text{C}$) |
 | **Smoothing Capacitance** | — | 1000 | — | $\mu$F | Main electrolytic filter capacitor ($C1$) |
 | **Quiescent Current** | — | 11.5 | — | mA | Idle consumption at $12\text{V}_{\text{DC}}$ (All switches ON, no load) |
 | **Output Connectors** | — | 2 | — | Ports | Dual independent 2-pin headers (`J2` and `J3`) |
@@ -34,10 +37,6 @@ Voltage regulation is executed via a cascaded topology:
 
 ### PCB Layout
 ![mob-pcb](mob-audio-psu-9v-5v_pcb.jpg)
-
-
-## Test Log
-Todo.
 
 
 ## Bill of Materials
