@@ -19,7 +19,7 @@ These MOdule Boards (MOBs) are useful for:
 - **`[Legacy]` TEBO**: Legacy board from the previous TEBO standard, **non-compliant** with the current MOB standard:
   * **Power Supply Polarity**: Often reversed (**Positive on the Right** on the `PWR` connector).
   * **Missing Features**: No onboard power status LED or dedicated bulk capacitor.
-  * **Connectors**: Non-standard pitch/pinout (incompatible with standard Molex-KK).
+  * **Connectors**: Non-standard Molex-KK.
 
 ### MOBs for PSU eXPeriences
 | Module | Description | Voltage Range | Status |
@@ -29,6 +29,7 @@ These MOdule Boards (MOBs) are useful for:
 | [mob-psu-distribution](mobs/mob-psu-distribution/) | Eight-lines power bus expansion | 3.3–9.0V | `[Validated]` |
 | [mob-psu-vdivider-pot-2x](mobs/mob-psu-vdivider-pot-2x/) | Dual potentiometers voltage-divider | 3.3–9.0V | `[Validated]` |
 | [mob-psu-vdivider-buf](mobs/mob-psu-vdivider-buf/) | Dual buffered voltage divider ($V_{CC}/2$ and $V_{CC}/4$ references) | 3.3–9.0V | `[Designed]` |
+| [mob-psu-resistive-18R8](mobs/mob-psu-resistive-18R8/) | 18.8 Ohm resistive load (266mA @ 5V, 479mA @ 9V) | 3.3–9.0V | `[Validated]` |
 
 ### MOBs for Digital eXPeriences
 | Module | Description | Voltage Range | Status |
@@ -70,7 +71,7 @@ Schematics and PCB layouts are designed with ExpressPCB free CAD software.
 * `mob-mcu` (microcontroller host units)
 * `mob-audio` (audio signal chain units)
 
-### Standard Hardware Rules
+### Baseline Hardware Rules
 * **Paperboard Grid Sizes**: $2\times8\text{cm}$, $4\times6\text{cm}$, $5\times7\text{cm}$, $7\times10\text{cm}$
 * **Power Connection**: Standard power connector (`PWR`) with positive pin on the left, bulk capacitor ($C$), and power-on indicator LED (`DL`).
 * **Activity Indicator LEDs**:
