@@ -41,7 +41,7 @@ These MOdule Boards (MOBs) are useful for:
 | [mob-io-matrix-switch-4x4](mobs/mob-io-matrix-switch-4x4/) | 4x4 input switch matrix | 3.3–5.0V (logic) | `[Validated]` |
 | [mob-if-midi](mobs/mob-if-midi/) | MIDI IN/OUT/THRU interface | 3.3–5.0V (logic) | `[Validated]` |
 | [mob-if-rs232](mobs/mob-if-rs232/) | RS-232 interface | 5.0V (logic) | `[Designed]` |
-| [mob-mcu-pic16f6x8](mobs/mob-mcu-pic16f6x8/) | Microchip PIC16F6x8 microcontroller board | 5.0V (logic) | `[Prototyped]` |
+| [mob-mcu-pic16f6x8](mobs/mob-mcu-pic16f6x8/) | Microchip PIC16F6x8 microcontroller board | 5.0V (logic) | `[Validated]` |
 
 ### MOBs for Audio eXPeriences
 | Module | Description | Voltage Range | Status |
@@ -65,13 +65,15 @@ Schematics and PCB layouts are designed with ExpressPCB free CAD software.
 ### MOBs naming convention
 * `mob` (module board base)
 * `mob-psu` (power supply & power conditioning units)
-* `mob-io` (digital & analog input/output units)
+* `mob-io` (input/output units)
 * `mob-if` (communication & interface units)
-* `mob-fn` (specialized function controller units)
+* `mob-fn` (specialized function units)
 * `mob-mcu` (microcontroller host units)
-* `mob-audio` (audio signal chain units)
+* `mob-audio` (audio signal units)
 
 ### Baseline Hardware Rules
+To maintain consistency and simplify assembly across all MOBs, the following baseline rules were adopted where possible:
+
 * **Paperboard Grid Sizes**: $2\times8\text{cm}$, $4\times6\text{cm}$, $5\times7\text{cm}$, $7\times10\text{cm}$
 * **Power Connection**: Standard power connector (`PWR`) with positive pin on the left, bulk capacitor ($C$), and power-on indicator LED (`DL`).
 * **Activity Indicator LEDs**:
@@ -80,12 +82,8 @@ Schematics and PCB layouts are designed with ExpressPCB free CAD software.
   * 3/5mm Yellow LED: Warning status
   * 3/5mm Red LED: Error / fault status
   * 3/5mm Blue LED: Manual intervention required
-
-### Design Rationale
-To maintain consistency and simplify assembly across all MOBs, the following baseline rules were adopted:
-
 * **LED Current Limiters ($1\text{k}\Omega$ @ 3V3 and 5V, $2.2\text{k}\Omega$ @ 9V)**: 
-  Calculated for standard 3mm/5mm LEDs to target $I_F \approx 3\text{mA} - 4\text{mA}$. This provides clear visual indication while minimizing total power consumption on the supply rails.
+  Calculated for standard 3mm/5mm LEDs to target $I_F \approx 1\text{mA} - 3\text{mA}$. This provides clear visual indication while minimizing total power consumption on the supply rails.
 * **Digital Line Pull-Ups ($10\text{k}\Omega$)**: 
   Standard trade-off value offering noise immunity for low-frequency/static digital lines while keeping active-LOW state power waste below $0.5\text{mA}$ (@ 5V). 
   For high-impedance CMOS logic inputs, the voltage drop across the resistor is negligible ($V_{IH} \approx V_{CC}$). For TTL inputs (where input leakage current $I_{IH}$ causes a small voltage drop $V_{drop} = I_{IH} \cdot R$), a single $10\text{k}\Omega$ pull-up maintains $V_{IH}$ well above the TTL logic HIGH threshold ($2.0\text{V}$).
